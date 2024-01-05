@@ -1,0 +1,47 @@
+:root {
+  --component-color: rgb(218, 243, 253);
+  font-family: system-ui, -apple-system;
+}
+
+.buttons {
+  margin: 1rem 0;
+}
+
+button {
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  background: rgb(from var(--component-color) r g b / 50%);
+  border: 1px solid oklch(from var(--component-color) 90% c h);
+}
+
+button:hover {
+  cursor: pointer;
+  background: oklch(from var(--component-color) 90% c h);
+  border-color: oklch(from var(--component-color) calc(l - 15) c h);
+}
+
+.choice {
+  font-style: italic;
+}
+
+.result {
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  padding: 0.3rem;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin: .3rem;
+  display: inline-block;
+}
+
+.tie {
+  background: rgba(14, 122, 4, 0.1);
+}
+.winner {
+  color: rgb(217, 255, 0);
+  background: rgba(14, 122, 4, 0.1);
+}
+.loser {
+  color: rgb(255, 94, 0);
+  background: rgba(168, 5, 5, 0.1);
+}
